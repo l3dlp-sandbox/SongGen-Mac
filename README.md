@@ -15,7 +15,7 @@
 
 This is a specialized fork of **SongGeneration Studio**, engineered to run on **Macs with any M series Apple Silicon chips **.
 
-The original model requires massive NVIDIA GPUs. We have patched the entire dependency chain to translate CUDA instructions to **Metal (MPS)**, optimized memory usage to prevent crashes, and created a universal installer that works on any Apple Silicon Mac.
+The original model requires extensive NVIDIA GPUs and CUDA dependencies to run. We have patched the entire dependency chain to translate CUDA instructions to **Metal (MPS)**, optimized memory usage to prevent crashes, and created a universal installer that works on any Apple Silicon Mac.
 
 <br>
 <div align="center">
