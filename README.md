@@ -63,7 +63,7 @@ This app is designed to be installed via **Pinokio**, the AI browser.
 3.  **Paste into Pinokio:** Open Pinokio, go to Discover > Download from URL > paste the URL into the respective field , and select Download.
 4.  **Click Install:**
     * The installer will automatically detect your Mac chip.
-    * It will fetch the initial model weights (~15GB). (the main song models, base or large, are to downloaded later from the UI)
+    * It will fetch the initial model weights (~15GB). (the main song models, base or large, are to be downloaded later from the UI)
     * It will patch all Python libraries (`librosa`, `torchcodec`, `flash-attn`) for Mac compatibility.
 
 That's it! No terminal commands needed. ✅
