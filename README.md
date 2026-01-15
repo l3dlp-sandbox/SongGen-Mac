@@ -59,7 +59,7 @@ The original model requires massive NVIDIA GPUs. We have patched the entire depe
 This app is designed to be installed via **Pinokio**, the AI browser.
 
 1.  **Download Pinokio:** [pinokio.computer](https://pinokio.computer)
-2.  **Copy this Repository URL:**
+2.  **Copy this Repository URL:** https://github.com/Rdx-ai-art/SongGen-Mac.git
 3.  **Paste into Pinokio:** Open Pinokio, go to Discover > Download from URL > paste the URL into the respective field , and select Download.
 4.  **Click Install:**
     * The installer will automatically detect your Mac chip.
