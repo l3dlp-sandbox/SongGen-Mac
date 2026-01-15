@@ -23,7 +23,7 @@ The original model requires massive NVIDIA GPUs. We have patched the entire depe
 
 <img src="assets/ui_main.png" width="800" alt="Main Interface">
 
-<img src="assets/ui_slider.png" width="400" alt="Duration Slider">
+<img src="assets/ui_dur_slider.png" width="400" alt="Duration Slider">
 </div>
 
 <br>
@@ -58,8 +58,8 @@ The original model requires massive NVIDIA GPUs. We have patched the entire depe
 This app is designed to be installed via **Pinokio**, the AI browser.
 
 1.  **Download Pinokio:** [pinokio.computer](https://pinokio.computer)
-2.  **Copy this Repository URL:** (Paste your GitHub URL here)
-3.  **Paste into Pinokio:** Open Pinokio, paste the URL into the search bar, and hit Enter.
+2.  **Copy this Repository URL:**
+3.  **Paste into Pinokio:** Open Pinokio, go to Discover > Download from URL > paste the URL into the respective field , and select Download.
 4.  **Click Install:**
     * The installer will automatically detect your Mac chip.
     * It will fetch the initial model weights (~15GB). (the main song models, base or large, are to downloaded later from the UI)
