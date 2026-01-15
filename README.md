@@ -4,7 +4,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/BazedFrog/SongGeneration-Studio/main/web/static/Logo_1.png" width="200" alt="Logo">
   <br>
-  <b>The first fully functional, native Apple Silicon port of Tencent's SongGeneration.</b>
+  <b>The first fully functional, Apple Silicon port of Tencent's SongGeneration.</b>
   <br>
   <i>100% Local. No Cloud. No NVIDIA GPU Required.</i>
 </div>
@@ -15,7 +15,7 @@
 
 This is a specialized fork of **SongGeneration Studio**, engineered to run on **Macs with any M series Apple Silicon chips **.
 
-The original model requires massive NVIDIA GPUs. We have patched the entire dependency chain to translate CUDA instructions to **Metal (MPS)**, optimized memory usage to prevent crashes, and created a universal installer that works on any Silicon Mac.
+The original model requires massive NVIDIA GPUs. We have patched the entire dependency chain to translate CUDA instructions to **Metal (MPS)**, optimized memory usage to prevent crashes, and created a universal installer that works on any Apple Silicon Mac.
 
 <br>
 <div align="center">
@@ -29,7 +29,7 @@ The original model requires massive NVIDIA GPUs. We have patched the entire depe
 <br>
 
 ### 🍎 Mac-Specific Features
-* **Native Metal (MPS) Support:** Runs completely on your Mac's Neural Engine & GPU.
+* ** Metal (MPS) Support:** Runs completely on your Mac's GPU via MPS on pytorch.
 * **Smart Memory Management:** Dynamically detects your RAM (16GB vs 64GB) to prevent crashes.
 * **Base & Large Model Support:** Choose between speed (>=6 mins for ~2 min song) or maximum quality (>=12 mins for ~2 min song).
 * **Universal Compatibility:** Tested on M1 Max 64gb, Mac OS 15.7.2 Sequoia. Compatible with all M series chips.
@@ -42,7 +42,7 @@ The original model requires massive NVIDIA GPUs. We have patched the entire depe
 
 | Component | Minimum (Base Model) | Recommended (Large Model) |
 | :--- | :--- | :--- |
-| **Chip** | M1 / M2 / M3 (Base/Pro) | M1 / M2 / M3 / M4 (Max/Ultra) |
+| **Chip** | M1 / M2 / M3 / M4 / M5 (Base/Pro) | M1 / M2 / M3 / M4 (Max/Ultra) |
 | **RAM** | **16 GB** | **32 GB+** (64GB Preferred) |
 | **OS** | macOS 14 (Sonoma) | macOS 15+ (Sequoia) |
 | **Storage** | 15 GB Free | 70 GB Free (due to Swap usage) |
