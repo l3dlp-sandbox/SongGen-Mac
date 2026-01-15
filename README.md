@@ -49,7 +49,8 @@ The original model requires massive NVIDIA GPUs. We have patched the entire depe
 | **Generation Time** | ~4-6 minutes | ~10-25 minutes |
 
 > **❌ 8GB RAM Users:** The "Large" model is **not supported** and will crash your system. You can attempt the "Base" model, but expect heavy slowness/system freeze.
-> **⚠️ Due to the model architecture(and inefficiency of apple mps), the total app ram usage(including swap) hits around 70gb during inference(for the fastest base model), so expect heavy swap usage for devices with <32gb memory. Large model goes around 80gb usage...
+
+> **⚠️ Due to the model architecture(and inefficiency of apple mps on pytorch), the total app ram usage(including swap) hits around 70gb during inference(for the fastest base model), so expect heavy swap usage for devices with <32gb memory. Large model goes around 80gb usage...
 
 ---
 
