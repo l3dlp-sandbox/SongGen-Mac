@@ -1,6 +1,6 @@
 module.exports = {
   version: "3.7",
-  title: "SongGen-Mac",  // <--- UPDATED NAME
+  title: "SongGen-Mac",
   description: "Generate music on Mac Apple Silicon with Duration Control",
   icon: "icon.png",
   menu: async (kernel, info) => {
@@ -64,6 +64,10 @@ module.exports = {
           icon: "fa-solid fa-plug",
           text: "Update",
           href: "update.js",
+        }, {
+          icon: "fa-solid fa-toolbox",
+          text: "Repair UI",
+          href: "repair.js",
         }, {
           icon: "fa-regular fa-circle-xmark",
           text: "Reset",
