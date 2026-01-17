@@ -3,7 +3,7 @@ module.exports = {
     bundle: "ai"
   },
   run: [
-    // 1. Clone the base repository into 'app'
+    // 1. Clone the base repository
     {
       method: "shell.run",
       params: {
@@ -12,7 +12,7 @@ module.exports = {
         ]
       }
     },
-    // 2. Download Model Weights (11GB)
+    // 2. Download model weights (11GB)
     {
       method: "hf.download",
       params: {
@@ -21,7 +21,7 @@ module.exports = {
         "local-dir": "."
       }
     },
-    // 3. Cleanup Cache to save disk space
+    // 3. Cleanup Cache to save space
     {
       method: "shell.run",
       params: {
@@ -32,7 +32,7 @@ module.exports = {
         ]
       }
     },
-    // 4. Install Dependencies (Mac Optimized)
+    // 4. Install Dependencies
     {
       method: "shell.run",
       params: {
@@ -44,21 +44,40 @@ module.exports = {
         ]
       }
     },
-    // 5. APPLY FIXES: Copy your local patched files into the app folder
-    { method: "fs.copy", params: { src: "main.py", dest: "app/main.py" } },
-    { method: "fs.copy", params: { src: "config.py", dest: "app/config.py" } },
-    { method: "fs.copy", params: { src: "schemas.py", dest: "app/schemas.py" } },
-    { method: "fs.copy", params: { src: "generation.py", dest: "app/generation.py" } },
-    { method: "fs.copy", params: { src: "model_server.py", dest: "app/model_server.py" } },
-    
-    // --- CRITICAL FIX: Use the correct inference engine ---
-    { method: "fs.copy", params: { src: "levo_inference.py", dest: "app/tools/gradio/levo_inference.py" } },
-
-    // 6. UPDATE UI: Copy the Duration Slider components
-    { method: "fs.copy", params: { src: "app.js", dest: "app/web/static/app.js" } },
-    { method: "fs.copy", params: { src: "components.js", dest: "app/web/static/components.js" } },
-    
-    // 7. Finish
+    // 5. FORCE COPY FILES
+    {
+      method: "shell.run",
+      params: {
+        path: ".",
+        message: [
+          "echo '--- STARTING FILE SYNC ---'",
+          
+          // A. Copy the entire 'web' folder structure first
+          "cp -R web app/",
+          
+          // B. Force copy the specific UI files (overwriting the base ones)
+          "cp -f app.js app/web/static/",
+          "cp -f components.js app/web/static/",
+          
+          // C. Force copy all Python Backend files
+          "cp -f main.py app/main.py",
+          "cp -f config.py app/config.py",
+          "cp -f schemas.py app/schemas.py",
+          "cp -f generation.py app/generation.py",
+          "cp -f model_server.py app/model_server.py",
+          "cp -f models.py app/models.py",
+          "cp -f gpu.py app/gpu.py",
+          "cp -f sse.py app/sse.py",
+          "cp -f timing.py app/timing.py",
+          
+          // D. Force copy the Inference Engine (Critical for Mac)
+          "cp -f levo_inference.py app/tools/gradio/levo_inference.py",
+          
+          "echo '--- FILE SYNC COMPLETE ---'"
+        ]
+      }
+    },
+    // 6. Finish
     {
       method: "notify",
       params: {
