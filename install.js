@@ -12,15 +12,6 @@ module.exports = {
         ]
       }
     },
-    // 2. Download model weights (11GB)
-    {
-      method: "hf.download",
-      params: {
-        path: "app",
-        _: ["lglg666/SongGeneration-Runtime"],
-        "local-dir": "."
-      }
-    },
     // 3. Cleanup Cache to save space
     {
       method: "shell.run",
