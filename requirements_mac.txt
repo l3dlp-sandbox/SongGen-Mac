@@ -17,6 +17,7 @@ flashy==0.0.2
 k-diffusion==0.1.1
 einops-exts==0.0.4
 soundfile==0.13.1
+lightning
 
 # Web & Utilities
 gradio
