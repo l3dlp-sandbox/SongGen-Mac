@@ -3,12 +3,13 @@ module.exports = {
     bundle: "ai"
   },
   run: [
-    // 1. Clone the base repository
+   // 1. Clone the base repository
     {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/tencent-ailab/SongGeneration app"
+          // ADD --recursive HERE
+          "git clone --recursive https://github.com/tencent-ailab/SongGeneration app"
         ]
       }
     },
