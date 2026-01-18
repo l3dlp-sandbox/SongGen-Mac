@@ -3,7 +3,16 @@ module.exports = {
     bundle: "ai"
   },
   run: [
-    // 3. Cleanup Cache to save space
+    // 1. Download Model Weights (~15GB)
+    {
+      method: "hf.download",
+      params: {
+        path: "app",
+        _: ["lglg666/SongGeneration-Runtime"],
+        "local-dir": "."
+      }
+    },
+    // 2. Cleanup Cache to save space
     {
       method: "shell.run",
       params: {
@@ -14,7 +23,7 @@ module.exports = {
         ]
       }
     },
-    // 4. Install Dependencies
+    // 3. Install Dependencies
     {
       method: "shell.run",
       params: {
@@ -26,7 +35,7 @@ module.exports = {
         ]
       }
     },
-    // 6. Finish
+    // 4. Finish
     {
       method: "notify",
       params: {
