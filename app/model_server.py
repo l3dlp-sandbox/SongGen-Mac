@@ -1,7 +1,7 @@
 """
 SongGeneration Studio - Model Server Communication
 Persistent model in VRAM for fast generation.
-Updated for Mac (MPS) Support + Infinite Patience Mode.
+Updated for Mac (MPS) Support + Infinite Timeout.
 """
 
 import os
