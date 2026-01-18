@@ -40,8 +40,6 @@ def is_model_server_running() -> bool:
     """Check if model server is running and responsive (blocking)."""
     try:
         # Keep a short timeout here just for health checks (2s)
-        # If the server is swapped out so hard it can't reply to /health in 2s,
-        # it might arguably be considered 'down', but usually the OS prioritizes small packets.
         resp = requests.get(f"{MODEL_SERVER_URL}/health", timeout=2)
         return resp.status_code == 200
     except:
@@ -358,7 +356,6 @@ if __name__ == "__main__":
     if torch.backends.mps.is_available():
         print("[MAC-FIX] Apple Silicon detected! Applying MPS compatibility patches.")
         
-        # Capture the REAL torch.device class before we overwrite it
         _RealTorchDevice = torch.device
 
         # --- UNIVERSAL DEVICE INTERCEPTOR ---
@@ -398,6 +395,52 @@ if __name__ == "__main__":
                 arg = "mps"
             return _RealTorchDevice(arg, *args, **kwargs)
         torch.device = device_shim
+
+        # --- FACTORY SHIM START (Intercedes torch.randn, torch.zeros, etc.) ---
+        # This prevents 'Torch not compiled with CUDA enabled' errors from libraries like diffusers
+        
+        _orig_randn = torch.randn
+        def randn_shim(*args, **kwargs):
+            args, kwargs = sanitize_device_args(args, kwargs)
+            return _orig_randn(*args, **kwargs)
+        torch.randn = randn_shim
+        
+        _orig_rand = torch.rand
+        def rand_shim(*args, **kwargs):
+            args, kwargs = sanitize_device_args(args, kwargs)
+            return _orig_rand(*args, **kwargs)
+        torch.rand = rand_shim
+        
+        _orig_zeros = torch.zeros
+        def zeros_shim(*args, **kwargs):
+            args, kwargs = sanitize_device_args(args, kwargs)
+            return _orig_zeros(*args, **kwargs)
+        torch.zeros = zeros_shim
+        
+        _orig_ones = torch.ones
+        def ones_shim(*args, **kwargs):
+            args, kwargs = sanitize_device_args(args, kwargs)
+            return _orig_ones(*args, **kwargs)
+        torch.ones = ones_shim
+        
+        _orig_full = torch.full
+        def full_shim(*args, **kwargs):
+            args, kwargs = sanitize_device_args(args, kwargs)
+            return _orig_full(*args, **kwargs)
+        torch.full = full_shim
+        
+        _orig_tensor = torch.tensor
+        def tensor_ctor_shim(*args, **kwargs):
+            args, kwargs = sanitize_device_args(args, kwargs)
+            return _orig_tensor(*args, **kwargs)
+        torch.tensor = tensor_ctor_shim
+        
+        _orig_arange = torch.arange
+        def arange_shim(*args, **kwargs):
+            args, kwargs = sanitize_device_args(args, kwargs)
+            return _orig_arange(*args, **kwargs)
+        torch.arange = arange_shim
+        # --- FACTORY SHIM END ---
         
         # --- TYPE TRANSLATOR (Fixes 'invalid type: torch.mps.FloatTensor') ---
         _orig_type = torch.Tensor.type
