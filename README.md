@@ -15,7 +15,7 @@
 
 This is a specialized fork of **SongGeneration Studio**, engineered to run on **Macs with any M series Apple Silicon chips **.
 
-The original model requires extensive NVIDIA GPUs and CUDA dependencies to run. We have patched the entire dependency chain to translate CUDA instructions to **Metal (MPS)**, optimized memory usage to prevent crashes, and created a universal installer that works on any Apple Silicon Mac.
+The original model requires NVIDIA GPUs and CUDA dependencies to run. We have patched the entire dependency chain to translate CUDA instructions to **Metal (MPS)**, optimized memory usage to prevent crashes, and created a universal installer that works on any Apple Silicon Mac.
 
 <br>
 <div align="center">
@@ -40,7 +40,7 @@ The original model requires extensive NVIDIA GPUs and CUDA dependencies to run. 
 
 **⚠️ Critical:** This runs locally on your Mac. Your hardware determines your performance.
 
-| Component | Minimum (Base Model) | Recommended (Large Model) |
+| Component | Bare Minimum (Base Model) | Recommended |
 | :--- | :--- | :--- |
 | **Chip** | M1 / M2 / M3 / M4 / M5 (Base/Pro) | M1 / M2 / M3 / M4 (Max/Ultra) |
 | **RAM** | **16 GB** | **32 GB+** (64GB Preferred) |
@@ -50,7 +50,7 @@ The original model requires extensive NVIDIA GPUs and CUDA dependencies to run. 
 
 > **❌ 8GB RAM Users:** The "Large" model is **not supported** and will crash your system. You can attempt the "Base" model, but expect heavy slowness/system freeze.
 
-> **⚠️ Due to the model architecture(and inefficiency of apple mps on pytorch), the total app ram usage(including swap) hits around 70gb during inference(for the fastest base model), so expect heavy swap usage for devices with <32gb memory. Large model goes around 80gb usage...
+> **⚠️ Due to the model architecture(and inefficiency of apple mps on pytorch), the total app ram usage(including swap) hits around 70gb during inference(even for the fastest base model), so expect heavy swap usage for devices with <32gb memory. Large model goes around 80gb usage...
 
 ---
 
