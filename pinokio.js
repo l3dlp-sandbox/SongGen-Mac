@@ -1,7 +1,7 @@
 module.exports = {
   version: "3.7",
   title: "SongGen-Mac",
-  description: "Generate music on Mac Apple Silicon with Duration Control",
+  description: "Generate music on Mac Apple Silicon with Duration Control using tencent's LeVo model",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
