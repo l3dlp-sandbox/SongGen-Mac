@@ -1,6 +1,6 @@
 {
-  "title": "SongGeneration Studio",
-  "description": "AI Song Generation with Full Style Control - Generate complete songs with lyrics, vocals, and instrumental tracks using Tencent AI Lab's SongGeneration (LeVo) model.",
+  "title": "SongGen-Mac",
+  "description": "AI Song Generation on Mac Apple Silicon, with Full Style Control - Generate complete songs with lyrics, vocals, and instrumental tracks using Tencent AI Lab's SongGeneration (LeVo) model.",
   "icon": "icon.png",
   "plugin": {
     "menu": []
