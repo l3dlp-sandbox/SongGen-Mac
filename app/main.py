@@ -1,7 +1,7 @@
 """
 SongGeneration Studio - Model Registry & Download Manager
 Model definitions, status checking, and download management.
-Updated for Mac Stability (Subprocess API Download + Cancel Support).
+Updated for Mac Stability (Subprocess API Download).
 """
 
 import os
