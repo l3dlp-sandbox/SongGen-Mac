@@ -29,7 +29,7 @@ The original model requires NVIDIA GPUs and CUDA dependencies to run. We have pa
 <br>
 
 ### 🍎 Mac-Specific Features
-* ** Metal (MPS) Support:** Runs completely on your Mac's GPU via MPS on pytorch.
+* **Metal (MPS) Support:** Runs completely on your Mac's GPU via MPS on pytorch.
 * **Smart Memory Management:** Dynamically detects your RAM (16GB vs 64GB) to prevent crashes.
 * **Base & Large Model Support:** Choose between speed (>=6 mins for ~2 min song) or maximum quality (>=12 mins for ~2 min song).
 * **Universal Compatibility:** Tested on M1 Max 64gb, Mac OS 15.7.2 Sequoia. Compatible with all M series chips.
@@ -98,7 +98,8 @@ You can upload an MP3/WAV to clone its vibe (15 secs max, will be cut after uplo
     * Ensure you have at least **60GB of free disk space** before running the Large model, or the OS may freeze.
 * **System Sluggishness:**
     * While generating, the AI uses nearly 100% of your system resources. It is normal for other apps to lag.
-
+* **Pre-Chorus is bugged:**
+    * Pre-chorus block produces gibberish and buggy vocals, especially in the first added block... so maybe avoid it, if its being buggy for your lyrics.
 ---
 
 ## 🙏 Credits
