@@ -1,7 +1,6 @@
 """
 SongGeneration Studio - Model Registry & Download Manager
 Model definitions, status checking, and download management.
-Updated for Mac Stability (Direct Python Download).
 """
 
 import sys
@@ -43,10 +42,9 @@ MODEL_REGISTRY: Dict[str, dict] = {
         "hf_repo": "lglg666/SongGeneration-base",
         "size_gb": 11.3,
         # Direct path to your installed folder
-        "path": "ckpt/model_1rvq" 
+        "path": "songgeneration_base" 
     },
     
-    # The Heavy One (If you want to try 80GB RAM again)
     "songgeneration_base_new": {
         "name": "SongGeneration - Base New",
         "description": "Newer architecture. High RAM usage on Mac.",
@@ -159,7 +157,10 @@ def get_model_status(model_id: str) -> str:
     possible_files = ["model.pt", "model.safetensors", "model_2.safetensors", "model_2_fixed.safetensors"]
     
     for fname in possible_files:
-        if (folder_path / fname).exists():
+        fpath = folder_path / fname
+        # --- FIX: Check if file exists AND is larger than 100MB ---
+        # This prevents 0-byte placeholders or corrupt downloads from showing "Ready"
+        if fpath.exists() and fpath.stat().st_size > 100 * 1024 * 1024:
             return "ready"
 
     return "not_downloaded"
