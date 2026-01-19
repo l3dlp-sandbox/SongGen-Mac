@@ -1,0 +1,156 @@
+[
+  {
+    "model": "songgeneration_large",
+    "num_sections": 5,
+    "total_lyrics_length": 569,
+    "complexity_bucket": "medium",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 766,
+    "completed_at": "2025-12-27T20:56:18.704279"
+  },
+  {
+    "model": "songgeneration_large",
+    "num_sections": 5,
+    "total_lyrics_length": 569,
+    "complexity_bucket": "medium",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 1784,
+    "completed_at": "2025-12-28T09:34:45.219965"
+  },
+  {
+    "model": "songgeneration_large",
+    "num_sections": 5,
+    "total_lyrics_length": 569,
+    "complexity_bucket": "medium",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 622,
+    "completed_at": "2025-12-28T10:31:29.744304"
+  },
+  {
+    "model": "songgeneration_large",
+    "num_sections": 10,
+    "total_lyrics_length": 1589,
+    "complexity_bucket": "very_high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": true,
+    "generation_time_seconds": 1622,
+    "completed_at": "2026-01-11T13:26:16.786086"
+  },
+  {
+    "model": "songgeneration_large",
+    "num_sections": 8,
+    "total_lyrics_length": 566,
+    "complexity_bucket": "high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": true,
+    "generation_time_seconds": 1063,
+    "completed_at": "2026-01-11T14:33:16.850129"
+  },
+  {
+    "model": "songgeneration_base_new",
+    "num_sections": 9,
+    "total_lyrics_length": 2253,
+    "complexity_bucket": "very_high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 915,
+    "completed_at": "2026-01-13T15:19:21.881729"
+  },
+  {
+    "model": "songgeneration_base_new",
+    "num_sections": 9,
+    "total_lyrics_length": 1595,
+    "complexity_bucket": "very_high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 751,
+    "completed_at": "2026-01-13T17:12:11.423372"
+  },
+  {
+    "model": "songgeneration_base_new",
+    "num_sections": 9,
+    "total_lyrics_length": 743,
+    "complexity_bucket": "high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 859,
+    "completed_at": "2026-01-13T18:21:00.337723"
+  },
+  {
+    "model": "songgeneration_base",
+    "num_sections": 11,
+    "total_lyrics_length": 1135,
+    "complexity_bucket": "high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 912,
+    "completed_at": "2026-01-13T22:47:18.433030"
+  },
+  {
+    "model": "songgeneration_base",
+    "num_sections": 10,
+    "total_lyrics_length": 1135,
+    "complexity_bucket": "high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 925,
+    "completed_at": "2026-01-14T08:53:15.711343"
+  },
+  {
+    "model": "songgeneration_base",
+    "num_sections": 9,
+    "total_lyrics_length": 995,
+    "complexity_bucket": "high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 736,
+    "completed_at": "2026-01-14T09:15:24.259977"
+  },
+  {
+    "model": "songgeneration_base",
+    "num_sections": 9,
+    "total_lyrics_length": 997,
+    "complexity_bucket": "high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 628,
+    "completed_at": "2026-01-14T12:22:25.083564"
+  },
+  {
+    "model": "songgeneration_base",
+    "num_sections": 9,
+    "total_lyrics_length": 997,
+    "complexity_bucket": "high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 404,
+    "completed_at": "2026-01-14T13:24:08.432060"
+  },
+  {
+    "model": "songgeneration_base",
+    "num_sections": 9,
+    "total_lyrics_length": 995,
+    "complexity_bucket": "high",
+    "has_lyrics": true,
+    "output_mode": "mixed",
+    "has_reference": false,
+    "generation_time_seconds": 628,
+    "completed_at": "2026-01-14T14:11:19.168689"
+  }
+]
