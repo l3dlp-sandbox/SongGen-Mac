@@ -42,13 +42,13 @@ The original model requires NVIDIA GPUs and CUDA dependencies to run. We have pa
 
 | Component | Bare Minimum (Base Model) | Recommended |
 | :--- | :--- | :--- |
-| **Chip** | M1 / M2 / M3 / M4 / M5 (Base/Pro) | M1 / M2 / M3 / M4 (Max/Ultra) |
-| **RAM** | **16 GB** | **32 GB+** (64GB Preferred) |
+| **Chip** | M1 / M2 / M3 / M4 / M5 (Pro) | M1 / M2 / M3 / M4 (Max/Ultra) |
+| **RAM** | **24 GB** | **32 GB+** (64GB Preferred) |
 | **OS** | macOS 14 (Sonoma) | macOS 15+ (Sequoia) |
 | **Storage** | 15 GB Free | 70 GB Free (due to Swap usage) |
 | **Generation Time** | ~4-6 minutes | ~10-25 minutes |
 
-> **❌ 8GB RAM Users:** The "Large" model is **not supported** and will crash your system. You can attempt the "Base" model, but expect heavy slowness/system freeze.
+> **❌ 16GB RAM Users:** The "Large" model is **not supported** and will crash your system. You can attempt the "Base" model, but expect heavy slowness/system freeze.
 
 > **⚠️ Due to the model architecture(and inefficiency of apple mps on pytorch), the total app ram usage(including swap) hits around 70gb during inference(even for the fastest base model), so expect heavy swap usage for devices with <32gb memory. Large model goes around 80gb usage...
 
